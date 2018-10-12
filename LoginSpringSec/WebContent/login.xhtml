@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+ <style type="text/css">
+   .ui-widget{font-size:16pt;font-color:#00f}
+ </style>
+</h:head>
+
+<h:body onload="acesso.show()">
+ <p:dialog header="Controle de Login" widgetVar="acesso"
+   closable="false" modal="true" resizable="false">
+   <form method="post" action="j_spring_security_check">
+    <h:panelGrid columns="2">
+     <h:outputText value="Usuario"></h:outputText>
+     <h:inputText id="j_username" required="true"></h:inputText>
+     <h:outputText value="Senha"></h:outputText>
+     <h:inputSecret id="j_password" required="true"></h:inputSecret>
+        <h:commandButton value="Entrar"></h:commandButton> 
+    </h:panelGrid>
+   </form>
+</p:dialog>
+</h:body>
+
+</html>
